@@ -48,6 +48,46 @@ const CarouselContainer = ({
   );
 };
 
+interface CarouselButtonsProps {
+  imagePathList: string[];
+  snappedIndex: number;
+  onClick: (buttonIndex: number) => void;
+}
+
+const CarouselButtons = ({
+  imagePathList,
+  snappedIndex,
+  onClick,
+}: CarouselButtonsProps) => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        padding: "4px 0px",
+      }}
+    >
+      {imagePathList.map((path, index) => (
+        <button
+          style={{
+            margin: "0px 10px",
+            width: "40px",
+            height: "40px",
+            borderRadius: "20px",
+            borderWidth: "0px",
+            color: "#ffffff",
+            backgroundColor: index === snappedIndex ? "#5955D9" : "#bcbbd8",
+          }}
+          key={path}
+          onClick={() => onClick(index)}
+        >
+          {index + 1}
+        </button>
+      ))}
+    </div>
+  );
+};
+
 const CarouselControl = () => {
   const imagePathList = ["/images/1.png", "/images/2.png", "/images/3.png"];
   const [snapped, setSnapped] = useState(0);
@@ -59,31 +99,13 @@ const CarouselControl = () => {
       }}
     >
       <CarouselContainer imagePathList={imagePathList} snappedIndex={snapped} />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          padding: "4px 0px",
+      <CarouselButtons
+        imagePathList={imagePathList}
+        snappedIndex={snapped}
+        onClick={(index) => {
+          setSnapped(index);
         }}
-      >
-        {imagePathList.map((path, index) => (
-          <button
-            style={{
-              margin: "0px 10px",
-              width: "40px",
-              height: "40px",
-              borderRadius: "20px",
-              borderWidth: "0px",
-              color: "#ffffff",
-              backgroundColor: index === snapped ? "#5955D9" : "#bcbbd8",
-            }}
-            key={path}
-            onClick={() => setSnapped(index)}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
+      />
     </div>
   );
 };
