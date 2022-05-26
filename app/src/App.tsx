@@ -1,5 +1,22 @@
 import React from "react";
 
+interface CarouselItemProps {
+  imagePath: string;
+}
+
+const CarouselItem = ({ imagePath }: CarouselItemProps) => {
+  return (
+    <div style={{ padding: "4px" }}>
+      <img
+        width="640px"
+        height="360px"
+        style={{ verticalAlign: "middle" }}
+        src={imagePath}
+      />
+    </div>
+  );
+};
+
 function App() {
   return (
     <div
@@ -14,30 +31,9 @@ function App() {
           flexDirection: "row",
         }}
       >
-        <div style={{ padding: "4px" }}>
-          <img
-            width="640px"
-            height="360px"
-            style={{ verticalAlign: "middle" }}
-            src="/images/1.png"
-          />
-        </div>
-        <div style={{ padding: "4px" }}>
-          <img
-            width="640px"
-            height="360px"
-            style={{ verticalAlign: "middle" }}
-            src="/images/2.png"
-          />
-        </div>
-        <div style={{ padding: "4px" }}>
-          <img
-            width="640px"
-            height="360px"
-            style={{ verticalAlign: "middle" }}
-            src="/images/3.png"
-          />
-        </div>
+        <CarouselItem imagePath="/images/1.png" />
+        <CarouselItem imagePath="/images/2.png" />
+        <CarouselItem imagePath="/images/3.png" />
       </div>
     </div>
   );
