@@ -29,7 +29,6 @@ const CarouselContainer = ({
   return (
     <div
       style={{
-        width: "648px",
         overflowX: "hidden",
       }}
     >
@@ -54,11 +53,25 @@ const CarouselControl = () => {
   const [snapped, setSnapped] = useState(0);
 
   return (
-    <div>
+    <div
+      style={{
+        width: "648px",
+      }}
+    >
       <CarouselContainer imagePathList={imagePathList} snappedIndex={snapped} />
-      <button onClick={() => setSnapped(0)}>1</button>
-      <button onClick={() => setSnapped(1)}>2</button>
-      <button onClick={() => setSnapped(2)}>3</button>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          padding: "4px 0px",
+        }}
+      >
+        {imagePathList.map((path, index) => (
+          <button key={path} onClick={() => setSnapped(index)}>
+            {index + 1}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
