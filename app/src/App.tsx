@@ -17,7 +17,11 @@ const CarouselItem = ({ imagePath }: CarouselItemProps) => {
   );
 };
 
-function App() {
+interface CarouselContainerProps {
+  imagePathList: string[];
+}
+
+const CarouselContainer = ({ imagePathList }: CarouselContainerProps) => {
   return (
     <div
       style={{
@@ -31,12 +35,20 @@ function App() {
           flexDirection: "row",
         }}
       >
-        <CarouselItem imagePath="/images/1.png" />
-        <CarouselItem imagePath="/images/2.png" />
-        <CarouselItem imagePath="/images/3.png" />
+        {imagePathList.map((path) => (
+          <CarouselItem key={path} imagePath={path} />
+        ))}
       </div>
     </div>
   );
-}
+};
+
+const App = () => {
+  return (
+    <CarouselContainer
+      imagePathList={["/images/1.png", "/images/2.png", "/images/3.png"]}
+    />
+  );
+};
 
 export default App;
