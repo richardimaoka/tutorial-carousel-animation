@@ -19,14 +19,18 @@ const CarouselItem = ({ imagePath }: CarouselItemProps) => {
 
 interface CarouselContainerProps {
   imagePathList: string[];
+  snappedIndex: number;
 }
 
-const CarouselContainer = ({ imagePathList }: CarouselContainerProps) => {
+const CarouselContainer = ({
+  imagePathList,
+  snappedIndex,
+}: CarouselContainerProps) => {
   return (
     <div
       style={{
         width: "648px",
-        overflowX: "auto",
+        overflowX: "hidden",
       }}
     >
       <div
@@ -34,7 +38,7 @@ const CarouselContainer = ({ imagePathList }: CarouselContainerProps) => {
           display: "flex",
           flexDirection: "row",
           transition: "all 0.3s linear",
-          transform: `translate(-1296px)`,
+          transform: `translate(${snappedIndex * -648}px)`,
         }}
       >
         {imagePathList.map((path) => (
@@ -51,11 +55,10 @@ const CarouselControl = () => {
 
   return (
     <div>
-      <CarouselContainer imagePathList={imagePathList} />
+      <CarouselContainer imagePathList={imagePathList} snappedIndex={snapped} />
       <button onClick={() => setSnapped(0)}>1</button>
       <button onClick={() => setSnapped(1)}>2</button>
       <button onClick={() => setSnapped(2)}>3</button>
-      <span>snapped ={snapped + 1}</span>
     </div>
   );
 };
