@@ -43,12 +43,17 @@ const CarouselContainer = ({ imagePathList }: CarouselContainerProps) => {
   );
 };
 
-const App = () => {
+const CarouselControl = () => {
+  const imagePathList = ["/images/1.png", "/images/2.png", "/images/3.png"];
   return (
-    <CarouselContainer
-      imagePathList={["/images/1.png", "/images/2.png", "/images/3.png"]}
-    />
+    <div>
+      <CarouselContainer imagePathList={imagePathList} />
+    </div>
   );
+};
+
+const App = () => {
+  return <CarouselControl />;
 };
 
 export default App;
