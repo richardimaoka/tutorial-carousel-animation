@@ -34,7 +34,7 @@ const CarouselContainer = ({ imagePathList }: CarouselContainerProps) => {
           display: "flex",
           flexDirection: "row",
           transition: "all 0.3s linear",
-          transform: `translate(-648px)`,
+          transform: `translate(-1296px)`,
         }}
       >
         {imagePathList.map((path) => (
