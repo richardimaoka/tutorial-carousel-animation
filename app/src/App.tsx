@@ -2,7 +2,7 @@ import React from "react";
 
 function App() {
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "row" }}>
       <div style={{ padding: "4px" }}>
         <img
           width="640px"
