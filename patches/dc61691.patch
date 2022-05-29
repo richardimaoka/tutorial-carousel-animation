@@ -1,0 +1,42 @@
+commit dc61691147ac18eb6ff8e9bdf3386116190ff53b
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Sun May 29 13:45:11 2022 +0900
+
+    let the prev and next buttons work
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index e752cb3..9eb6b1b 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -59,6 +59,9 @@ interface CarouselButtonsProps {
+ const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
+   const snappedIndex = images.findIndex((image) => image.isSnapped);
+ 
++  const hasPrev = 0 < snappedIndex;
++  const hasNext = snappedIndex < images.length - 1;
++
+   return (
+     <div
+       style={{
+@@ -75,8 +78,9 @@ const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
+           borderRadius: "20px",
+           borderWidth: "0px",
+           color: "#ffffff",
+-          backgroundColor: "#5955D9",
++          backgroundColor: hasPrev ? "#5955D9" : "#bcbbd8",
+         }}
++        onClick={hasPrev ? () => onClick(snappedIndex - 1) : undefined}
+       >
+         &lt;
+       </button>
+@@ -88,8 +92,9 @@ const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
+           borderRadius: "20px",
+           borderWidth: "0px",
+           color: "#ffffff",
+-          backgroundColor: "#5955D9",
++          backgroundColor: hasNext ? "#5955D9" : "#bcbbd8",
+         }}
++        onClick={hasNext ? () => onClick(snappedIndex + 1) : undefined}
+       >
+         &gt;
+       </button>

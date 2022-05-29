@@ -1,0 +1,51 @@
+commit eb1ce8eafd519ba445d7b939b9b58f2d8ee3e951
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Fri May 27 00:45:33 2022 +0900
+
+    define imagestate
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index 4daafc9..a3a7591 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -1,5 +1,10 @@
+ import React, { useState } from "react";
+ 
++interface ImageState {
++  imagePath: string;
++  isSnapped: boolean;
++}
++
+ interface CarouselItemProps {
+   imagePath: string;
+ }
+@@ -89,8 +94,29 @@ const CarouselButtons = ({
+ };
+ 
+ const CarouselControl = () => {
++  const [images, setImages] = useState<ImageState[]>([
++    {
++      imagePath: "/images/1.png",
++      isSnapped: true,
++    },
++    {
++      imagePath: "/images/2.png",
++      isSnapped: false,
++    },
++    {
++      imagePath: "/images/3.png",
++      isSnapped: false,
++    },
++  ]);
+   const imagePathList = ["/images/1.png", "/images/2.png", "/images/3.png"];
+   const [snapped, setSnapped] = useState(0);
++  const selectSnapped = (selectIndex: number) => {
++    const updated: ImageState[] = images.map((state, index) => ({
++      imagePath: state.imagePath,
++      isSnapped: selectIndex === index,
++    }));
++    setImages(updated);
++  };
+ 
+   return (
+     <div

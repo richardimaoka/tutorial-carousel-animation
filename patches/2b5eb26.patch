@@ -1,0 +1,48 @@
+commit 2b5eb26b03f73c8b9c965aaae502807b595c097d
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Thu May 26 23:38:25 2022 +0900
+
+    CarouselContainer component
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index ec81cf0..f2a144c 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -17,7 +17,11 @@ const CarouselItem = ({ imagePath }: CarouselItemProps) => {
+   );
+ };
+ 
+-function App() {
++interface CarouselContainerProps {
++  imagePathList: string[];
++}
++
++const CarouselContainer = ({ imagePathList }: CarouselContainerProps) => {
+   return (
+     <div
+       style={{
+@@ -31,12 +35,20 @@ function App() {
+           flexDirection: "row",
+         }}
+       >
+-        <CarouselItem imagePath="/images/1.png" />
+-        <CarouselItem imagePath="/images/2.png" />
+-        <CarouselItem imagePath="/images/3.png" />
++        {imagePathList.map((path) => (
++          <CarouselItem key={path} imagePath={path} />
++        ))}
+       </div>
+     </div>
+   );
+-}
++};
++
++const App = () => {
++  return (
++    <CarouselContainer
++      imagePathList={["/images/1.png", "/images/2.png", "/images/3.png"]}
++    />
++  );
++};
+ 
+ export default App;

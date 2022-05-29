@@ -1,0 +1,67 @@
+commit 905a2aff4d7c3972cfa29a50c95b5b6c82829830
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Thu May 26 23:34:45 2022 +0900
+
+    CarouselItem component
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index 6999418..ec81cf0 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -1,5 +1,22 @@
+ import React from "react";
+ 
++interface CarouselItemProps {
++  imagePath: string;
++}
++
++const CarouselItem = ({ imagePath }: CarouselItemProps) => {
++  return (
++    <div style={{ padding: "4px" }}>
++      <img
++        width="640px"
++        height="360px"
++        style={{ verticalAlign: "middle" }}
++        src={imagePath}
++      />
++    </div>
++  );
++};
++
+ function App() {
+   return (
+     <div
+@@ -14,30 +31,9 @@ function App() {
+           flexDirection: "row",
+         }}
+       >
+-        <div style={{ padding: "4px" }}>
+-          <img
+-            width="640px"
+-            height="360px"
+-            style={{ verticalAlign: "middle" }}
+-            src="/images/1.png"
+-          />
+-        </div>
+-        <div style={{ padding: "4px" }}>
+-          <img
+-            width="640px"
+-            height="360px"
+-            style={{ verticalAlign: "middle" }}
+-            src="/images/2.png"
+-          />
+-        </div>
+-        <div style={{ padding: "4px" }}>
+-          <img
+-            width="640px"
+-            height="360px"
+-            style={{ verticalAlign: "middle" }}
+-            src="/images/3.png"
+-          />
+-        </div>
++        <CarouselItem imagePath="/images/1.png" />
++        <CarouselItem imagePath="/images/2.png" />
++        <CarouselItem imagePath="/images/3.png" />
+       </div>
+     </div>
+   );

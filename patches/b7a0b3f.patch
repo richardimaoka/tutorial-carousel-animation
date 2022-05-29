@@ -1,0 +1,19 @@
+commit b7a0b3fc7b2952366659e480080a123fe7b59866
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Fri May 27 00:25:35 2022 +0900
+
+    tranform: translate(-1296px)
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index 2902cce..b17822c 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -34,7 +34,7 @@ const CarouselContainer = ({ imagePathList }: CarouselContainerProps) => {
+           display: "flex",
+           flexDirection: "row",
+           transition: "all 0.3s linear",
+-          transform: `translate(-648px)`,
++          transform: `translate(-1296px)`,
+         }}
+       >
+         {imagePathList.map((path) => (

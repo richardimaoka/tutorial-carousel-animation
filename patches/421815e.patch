@@ -1,0 +1,19 @@
+commit 421815e283b4ecf5abff1e943440b16e1e34d8dc
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Thu May 26 23:12:42 2022 +0900
+
+    display: auto
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index 3c31e49..5362d6f 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -2,7 +2,7 @@ import React from "react";
+ 
+ function App() {
+   return (
+-    <div>
++    <div style={{ display: "flex", flexDirection: "row" }}>
+       <div style={{ padding: "4px" }}>
+         <img
+           width="640px"

@@ -1,0 +1,31 @@
+commit 4c476b6e39e913ab300378c70915fefda99e5dbe
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Fri May 27 00:37:06 2022 +0900
+
+    decorate buttons
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index 8e8c77d..47dab26 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -67,7 +67,19 @@ const CarouselControl = () => {
+         }}
+       >
+         {imagePathList.map((path, index) => (
+-          <button key={path} onClick={() => setSnapped(index)}>
++          <button
++            style={{
++              margin: "0px 10px",
++              width: "40px",
++              height: "40px",
++              borderRadius: "20px",
++              borderWidth: "0px",
++              color: "#ffffff",
++              backgroundColor: index === snapped ? "#5955D9" : "#bcbbd8",
++            }}
++            key={path}
++            onClick={() => setSnapped(index)}
++          >
+             {index + 1}
+           </button>
+         ))}

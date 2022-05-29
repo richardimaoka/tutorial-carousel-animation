@@ -1,0 +1,170 @@
+commit f6e9e58c702edb468f5a520765873e987782a166
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Thu May 26 23:12:10 2022 +0900
+
+    images added
+
+diff --git a/client/app/public/images/1.png b/client/app/public/images/1.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..9b0804d2c23d053d75e7bf6825ebfad9f4b2127f
+GIT binary patch
+literal 2087
+zcmeAS@N?(olHy`uVBq!ia0y~yU}|7sV9elP1Bx6s@(Kh}oCO|{#S9GGLLkg|>2BR0
+z1_t(<o-U3d6?5L+HC#P8U83P(cwkG!#7nP~)|QDJ@5*b6ZujHUYg)W}vh%@(59YtT
+zu)m<oPp(9yl`raUmTccPM!_vL7rDG9&U5Bh*}0zkp6!Q}9iQteC)rNdv#Bs<U^sCj
+z`w9btE|UO*f*S)9!x0V#h6V{n4h8{b21bS?76k@}9tIYM4nd$>4M!D?1_4b{!5ia(
+zgt>FA>nm!ipKU&RbDi|{`8~hCKf5P?;Fe&+fm<_^-ha8N`HQdj=9y-`hJH?m1YMc`
+z&kp>)y-&aYjd@6ezd*x*Q&vSK|CN61`~9!@BKrnjCV>de&CS)~=Czl9{yM^VnE3`H
+zBZtmj&0l`=Ew?;Q<zui@VQ5^MI+Hn}oWmg@Gj?y;nF5Bg#(rR4z=-2DTYvufy5sBV
+zYd?N2PiN!((5IV_pnLc3pW?!IIr}6&?~m)BygV&A=Fg!Gje8Us8cRR@xOlp-I61p;
+z*$d_e_kpfm`uF3Pt2=gnthsaRhLnGOed-K`|BVbRVdq3@FF(Hfa@qUs?fSd|3A0%g
+zHV7?C?b|(D|JdBy`TK9PA2<ipz4GtoGlqA+F@E?D^yZ~qML)w&%P{Od@ScIm+xrjW
+z8@>^gS<lS#7MI&&SduVvj*Y3b{huFKZ=HGaZ|~0?g?~>9?Gb9&euuOote%yfLEtgl
+oXxTSfvSZ|W+SY)o$vyiS%m3wsb)VtX0@nNtp00i_>zopr07(4EfB*mh
+
+literal 0
+HcmV?d00001
+
+diff --git a/client/app/public/images/2.png b/client/app/public/images/2.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..b91c01096f2e525a234533df583f03df5876e897
+GIT binary patch
+literal 3274
+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
+P%L(u}=;K<spPcefOYUmb
+
+literal 0
+HcmV?d00001
+
+diff --git a/client/app/public/images/3.png b/client/app/public/images/3.png
+new file mode 100644
+index 0000000000000000000000000000000000000000..fc03c99a1afcbe15298bb740532b43a42ac0d8b3
+GIT binary patch
+literal 3628
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index 320f4c3..3c31e49 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -1,7 +1,34 @@
+ import React from "react";
+ 
+ function App() {
+-  return <div>empty application</div>;
++  return (
++    <div>
++      <div style={{ padding: "4px" }}>
++        <img
++          width="640px"
++          height="360px"
++          style={{ verticalAlign: "middle" }}
++          src="/images/1.png"
++        />
++      </div>
++      <div style={{ padding: "4px" }}>
++        <img
++          width="640px"
++          height="360px"
++          style={{ verticalAlign: "middle" }}
++          src="/images/2.png"
++        />
++      </div>
++      <div style={{ padding: "4px" }}>
++        <img
++          width="640px"
++          height="360px"
++          style={{ verticalAlign: "middle" }}
++          src="/images/3.png"
++        />
++      </div>
++    </div>
++  );
+ }
+ 
+ export default App;

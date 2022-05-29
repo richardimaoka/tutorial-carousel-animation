@@ -1,0 +1,65 @@
+commit e3916e9dd033dd9c4263046d83c8ccc1caca8b22
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Sun May 29 13:05:29 2022 +0900
+
+    place prev next buttons
+
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index 35c225f..e752cb3 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -63,27 +63,36 @@ const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
+     <div
+       style={{
+         display: "flex",
+-        justifyContent: "center",
++        justifyContent: "space-between",
+         padding: "4px 0px",
+       }}
+     >
+-      {images.map((image, index) => (
+-        <button
+-          style={{
+-            margin: "0px 10px",
+-            width: "40px",
+-            height: "40px",
+-            borderRadius: "20px",
+-            borderWidth: "0px",
+-            color: "#ffffff",
+-            backgroundColor: index === snappedIndex ? "#5955D9" : "#bcbbd8",
+-          }}
+-          key={image.imagePath}
+-          onClick={() => onClick(index)}
+-        >
+-          {index + 1}
+-        </button>
+-      ))}
++      <button
++        style={{
++          margin: "0px 10px",
++          width: "40px",
++          height: "40px",
++          borderRadius: "20px",
++          borderWidth: "0px",
++          color: "#ffffff",
++          backgroundColor: "#5955D9",
++        }}
++      >
++        &lt;
++      </button>
++      <button
++        style={{
++          margin: "0px 10px",
++          width: "40px",
++          height: "40px",
++          borderRadius: "20px",
++          borderWidth: "0px",
++          color: "#ffffff",
++          backgroundColor: "#5955D9",
++        }}
++      >
++        &gt;
++      </button>
+     </div>
+   );
+ };

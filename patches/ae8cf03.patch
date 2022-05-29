@@ -1,0 +1,95 @@
+commit ae8cf03bedb1a6089d48505b713ea7086eebd929
+Author: Richard Imaoka <richard.e.imaoka@gmail.com>
+Date:   Thu May 26 23:11:34 2022 +0900
+
+    empty application
+
+diff --git a/client/app/src/App.css b/client/app/src/App.css
+deleted file mode 100644
+index 74b5e05..0000000
+--- a/client/app/src/App.css
++++ /dev/null
+@@ -1,38 +0,0 @@
+-.App {
+-  text-align: center;
+-}
+-
+-.App-logo {
+-  height: 40vmin;
+-  pointer-events: none;
+-}
+-
+-@media (prefers-reduced-motion: no-preference) {
+-  .App-logo {
+-    animation: App-logo-spin infinite 20s linear;
+-  }
+-}
+-
+-.App-header {
+-  background-color: #282c34;
+-  min-height: 100vh;
+-  display: flex;
+-  flex-direction: column;
+-  align-items: center;
+-  justify-content: center;
+-  font-size: calc(10px + 2vmin);
+-  color: white;
+-}
+-
+-.App-link {
+-  color: #61dafb;
+-}
+-
+-@keyframes App-logo-spin {
+-  from {
+-    transform: rotate(0deg);
+-  }
+-  to {
+-    transform: rotate(360deg);
+-  }
+-}
+diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+index 9cc63d9..320f4c3 100644
+--- a/client/app/src/App.tsx
++++ b/client/app/src/App.tsx
+@@ -1,26 +1,7 @@
+ import React from "react";
+-import logo from "./logo.svg";
+-import "./App.css";
+ 
+ function App() {
+-  return (
+-    <div className="App">
+-      <header className="App-header">
+-        <img src={logo} className="App-logo" alt="logo" />
+-        <p>
+-          Edit <code>src/App.tsx</code> and save to reload.
+-        </p>
+-        <a
+-          className="App-link"
+-          href="https://reactjs.org"
+-          target="_blank"
+-          rel="noopener noreferrer"
+-        >
+-          Learn React
+-        </a>
+-      </header>
+-    </div>
+-  );
++  return <div>empty application</div>;
+ }
+ 
+ export default App;
+diff --git a/client/app/src/index.css b/client/app/src/index.css
+index 4a1df4d..0018389 100644
+--- a/client/app/src/index.css
++++ b/client/app/src/index.css
+@@ -6,8 +6,3 @@ body {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+ }
+-
+-code {
+-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+-    monospace;
+-}
