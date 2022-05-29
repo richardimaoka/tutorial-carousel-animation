@@ -4,10 +4,10 @@ Date:   Fri May 27 00:37:06 2022 +0900
 
     decorate buttons
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 8e8c77d..47dab26 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -67,7 +67,19 @@ const CarouselControl = () => {
          }}
        >

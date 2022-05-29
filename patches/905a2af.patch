@@ -4,10 +4,10 @@ Date:   Thu May 26 23:34:45 2022 +0900
 
     CarouselItem component
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 6999418..ec81cf0 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -1,5 +1,22 @@
  import React from "react";
  

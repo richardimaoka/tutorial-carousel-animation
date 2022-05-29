@@ -4,10 +4,10 @@ Date:   Thu May 26 23:32:42 2022 +0900
 
     overflow-x: hidden
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 5362d6f..6999418 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -2,30 +2,42 @@ import React from "react";
  
  function App() {

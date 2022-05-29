@@ -4,10 +4,10 @@ Date:   Sun May 29 13:05:29 2022 +0900
 
     place prev next buttons
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 35c225f..e752cb3 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -63,27 +63,36 @@ const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
      <div
        style={{

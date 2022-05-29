@@ -4,10 +4,10 @@ Date:   Fri May 27 00:41:37 2022 +0900
 
     buttons as a separate component
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 47dab26..4daafc9 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -48,6 +48,46 @@ const CarouselContainer = ({
    );
  };

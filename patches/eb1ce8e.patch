@@ -4,10 +4,10 @@ Date:   Fri May 27 00:45:33 2022 +0900
 
     define imagestate
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 4daafc9..a3a7591 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -1,5 +1,10 @@
  import React, { useState } from "react";
  

@@ -4,10 +4,10 @@ Date:   Fri May 27 00:35:25 2022 +0900
 
     centering buttons
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index b0efb86..8e8c77d 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -29,7 +29,6 @@ const CarouselContainer = ({
    return (
      <div

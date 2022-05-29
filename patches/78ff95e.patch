@@ -4,10 +4,10 @@ Date:   Sun May 29 12:22:48 2022 +0900
 
     replace state with the new style
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index a3a7591..35c225f 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -23,14 +23,12 @@ const CarouselItem = ({ imagePath }: CarouselItemProps) => {
  };
  

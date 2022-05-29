@@ -4,10 +4,10 @@ Date:   Fri May 27 00:33:12 2022 +0900
 
     buttons to work
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 6e8dab6..b0efb86 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -19,14 +19,18 @@ const CarouselItem = ({ imagePath }: CarouselItemProps) => {
  
  interface CarouselContainerProps {

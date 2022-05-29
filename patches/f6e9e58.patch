@@ -4,7 +4,7 @@ Date:   Thu May 26 23:12:10 2022 +0900
 
     images added
 
-diff --git a/client/app/public/images/1.png b/client/app/public/images/1.png
+diff --git a/app/public/images/1.png b/app/public/images/1.png
 new file mode 100644
 index 0000000000000000000000000000000000000000..9b0804d2c23d053d75e7bf6825ebfad9f4b2127f
 GIT binary patch
@@ -25,7 +25,7 @@ oXxTSfvSZ|W+SY)o$vyiS%m3wsb)VtX0@nNtp00i_>zopr07(4EfB*mh
 literal 0
 HcmV?d00001
 
-diff --git a/client/app/public/images/2.png b/client/app/public/images/2.png
+diff --git a/app/public/images/2.png b/app/public/images/2.png
 new file mode 100644
 index 0000000000000000000000000000000000000000..b91c01096f2e525a234533df583f03df5876e897
 GIT binary patch
@@ -73,7 +73,7 @@ P%L(u}=;K<spPcefOYUmb
 literal 0
 HcmV?d00001
 
-diff --git a/client/app/public/images/3.png b/client/app/public/images/3.png
+diff --git a/app/public/images/3.png b/app/public/images/3.png
 new file mode 100644
 index 0000000000000000000000000000000000000000..fc03c99a1afcbe15298bb740532b43a42ac0d8b3
 GIT binary patch
@@ -128,10 +128,10 @@ x0W#ZJNjL9k_vhp6=TrPYcc1y~epvPf6m)g)mE&WuAHMzp7e_aT$HxMH`7dJ{8$|#B
 literal 0
 HcmV?d00001
 
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 320f4c3..3c31e49 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -1,7 +1,34 @@
  import React from "react";
  

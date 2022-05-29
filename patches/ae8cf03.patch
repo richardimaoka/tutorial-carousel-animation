@@ -4,10 +4,10 @@ Date:   Thu May 26 23:11:34 2022 +0900
 
     empty application
 
-diff --git a/client/app/src/App.css b/client/app/src/App.css
+diff --git a/app/src/App.css b/app/src/App.css
 deleted file mode 100644
 index 74b5e05..0000000
---- a/client/app/src/App.css
+--- a/app/src/App.css
 +++ /dev/null
 @@ -1,38 +0,0 @@
 -.App {
@@ -48,10 +48,10 @@ index 74b5e05..0000000
 -    transform: rotate(360deg);
 -  }
 -}
-diff --git a/client/app/src/App.tsx b/client/app/src/App.tsx
+diff --git a/app/src/App.tsx b/app/src/App.tsx
 index 9cc63d9..320f4c3 100644
---- a/client/app/src/App.tsx
-+++ b/client/app/src/App.tsx
+--- a/app/src/App.tsx
++++ b/app/src/App.tsx
 @@ -1,26 +1,7 @@
  import React from "react";
 -import logo from "./logo.svg";
@@ -80,10 +80,10 @@ index 9cc63d9..320f4c3 100644
  }
  
  export default App;
-diff --git a/client/app/src/index.css b/client/app/src/index.css
+diff --git a/app/src/index.css b/app/src/index.css
 index 4a1df4d..0018389 100644
---- a/client/app/src/index.css
-+++ b/client/app/src/index.css
+--- a/app/src/index.css
++++ b/app/src/index.css
 @@ -6,8 +6,3 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
