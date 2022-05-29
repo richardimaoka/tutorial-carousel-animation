@@ -23,14 +23,12 @@ const CarouselItem = ({ imagePath }: CarouselItemProps) => {
 };
 
 interface CarouselContainerProps {
-  imagePathList: string[];
-  snappedIndex: number;
+  images: ImageState[];
 }
 
-const CarouselContainer = ({
-  imagePathList,
-  snappedIndex,
-}: CarouselContainerProps) => {
+const CarouselContainer = ({ images }: CarouselContainerProps) => {
+  const snappedIndex = images.findIndex((image) => image.isSnapped);
+
   return (
     <div
       style={{
@@ -45,8 +43,8 @@ const CarouselContainer = ({
           transform: `translate(${snappedIndex * -648}px)`,
         }}
       >
-        {imagePathList.map((path) => (
-          <CarouselItem key={path} imagePath={path} />
+        {images.map((i) => (
+          <CarouselItem key={i.imagePath} imagePath={i.imagePath} />
         ))}
       </div>
     </div>
@@ -54,16 +52,13 @@ const CarouselContainer = ({
 };
 
 interface CarouselButtonsProps {
-  imagePathList: string[];
-  snappedIndex: number;
+  images: ImageState[];
   onClick: (buttonIndex: number) => void;
 }
 
-const CarouselButtons = ({
-  imagePathList,
-  snappedIndex,
-  onClick,
-}: CarouselButtonsProps) => {
+const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
+  const snappedIndex = images.findIndex((image) => image.isSnapped);
+
   return (
     <div
       style={{
@@ -72,7 +67,7 @@ const CarouselButtons = ({
         padding: "4px 0px",
       }}
     >
-      {imagePathList.map((path, index) => (
+      {images.map((image, index) => (
         <button
           style={{
             margin: "0px 10px",
@@ -83,7 +78,7 @@ const CarouselButtons = ({
             color: "#ffffff",
             backgroundColor: index === snappedIndex ? "#5955D9" : "#bcbbd8",
           }}
-          key={path}
+          key={image.imagePath}
           onClick={() => onClick(index)}
         >
           {index + 1}
@@ -108,8 +103,6 @@ const CarouselControl = () => {
       isSnapped: false,
     },
   ]);
-  const imagePathList = ["/images/1.png", "/images/2.png", "/images/3.png"];
-  const [snapped, setSnapped] = useState(0);
   const selectSnapped = (selectIndex: number) => {
     const updated: ImageState[] = images.map((state, index) => ({
       imagePath: state.imagePath,
@@ -124,12 +117,11 @@ const CarouselControl = () => {
         width: "648px",
       }}
     >
-      <CarouselContainer imagePathList={imagePathList} snappedIndex={snapped} />
+      <CarouselContainer images={images} />
       <CarouselButtons
-        imagePathList={imagePathList}
-        snappedIndex={snapped}
+        images={images}
         onClick={(index) => {
-          setSnapped(index);
+          selectSnapped(index);
         }}
       />
     </div>
