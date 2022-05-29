@@ -76,7 +76,7 @@ git apply patches/6eeb010.patch # buttons to work
 # :large_orange_diamond: Action: 以下のコマンドを入力してください。
 
 # ```shell
-git apply patches/b5d8ceb.patch # centering buttons
+git apply patches/cc54e35.patch # centering buttons
 git apply patches/4c476b6.patch # decorate buttons
 # ```
 
