@@ -59,6 +59,9 @@ interface CarouselButtonsProps {
 const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
   const snappedIndex = images.findIndex((image) => image.isSnapped);
 
+  const hasPrev = 0 < snappedIndex;
+  const hasNext = snappedIndex < images.length - 1;
+
   return (
     <div
       style={{
@@ -75,8 +78,9 @@ const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
           borderRadius: "20px",
           borderWidth: "0px",
           color: "#ffffff",
-          backgroundColor: "#5955D9",
+          backgroundColor: hasPrev ? "#5955D9" : "#bcbbd8",
         }}
+        onClick={hasPrev ? () => onClick(snappedIndex - 1) : undefined}
       >
         &lt;
       </button>
@@ -88,8 +92,9 @@ const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
           borderRadius: "20px",
           borderWidth: "0px",
           color: "#ffffff",
-          backgroundColor: "#5955D9",
+          backgroundColor: hasNext ? "#5955D9" : "#bcbbd8",
         }}
+        onClick={hasNext ? () => onClick(snappedIndex + 1) : undefined}
       >
         &gt;
       </button>
