@@ -63,27 +63,36 @@ const CarouselButtons = ({ images, onClick }: CarouselButtonsProps) => {
     <div
       style={{
         display: "flex",
-        justifyContent: "center",
+        justifyContent: "space-between",
         padding: "4px 0px",
       }}
     >
-      {images.map((image, index) => (
-        <button
-          style={{
-            margin: "0px 10px",
-            width: "40px",
-            height: "40px",
-            borderRadius: "20px",
-            borderWidth: "0px",
-            color: "#ffffff",
-            backgroundColor: index === snappedIndex ? "#5955D9" : "#bcbbd8",
-          }}
-          key={image.imagePath}
-          onClick={() => onClick(index)}
-        >
-          {index + 1}
-        </button>
-      ))}
+      <button
+        style={{
+          margin: "0px 10px",
+          width: "40px",
+          height: "40px",
+          borderRadius: "20px",
+          borderWidth: "0px",
+          color: "#ffffff",
+          backgroundColor: "#5955D9",
+        }}
+      >
+        &lt;
+      </button>
+      <button
+        style={{
+          margin: "0px 10px",
+          width: "40px",
+          height: "40px",
+          borderRadius: "20px",
+          borderWidth: "0px",
+          color: "#ffffff",
+          backgroundColor: "#5955D9",
+        }}
+      >
+        &gt;
+      </button>
     </div>
   );
 };
